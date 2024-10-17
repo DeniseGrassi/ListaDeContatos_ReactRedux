@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.tsx
+import { Provider } from 'react-redux'
+import EstiloGlobal, { Container } from './styles'
+import store from './Store'
 
-function App() {
+import ListaContatos from './components/ListaDeContato'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Provider store={store}>
+      <EstiloGlobal />
+      <Container>
+        <ListaContatos />
+      </Container>
+    </Provider>
+  )
 }
 
-export default App;
+export default App
