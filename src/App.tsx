@@ -1,9 +1,8 @@
-// src/App.tsx
 import { Provider } from 'react-redux'
 import EstiloGlobal, { Container } from './styles'
 import store from './Store'
 
-import ListaContatos from './components/ListaDeContato'
+import ListaContatos from './containers/ListaDeContato'
 
 const App = () => {
   return (
